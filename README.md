@@ -1,6 +1,9 @@
 # my-buntu
 Build scripts and customization files to build custom Ubuntu ISO image
 
+![screenshot](my-buntu-dwm-2019-07-02-133014_1440x900_scrot.png)
+
+
 ### Different ways to build custom ISO I found in the Internet resources
 
 1. https://sourceforge.net/projects/pinguy-os/files/ISO_Builder/
