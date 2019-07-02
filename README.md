@@ -27,7 +27,9 @@ https://www.linuxuprising.com/2018/07/how-to-customize-ubuntu-or-linux-mint.html
 apt -y install squashfs-tools genisoimage
 
 
+BUILD_TOOLS_ROOT=`pwd`
 cd ~/
+
 BASE_ISO_IMAGE_NAME="xubuntu-18.04.2-desktop-amd64.iso"
 BASE_ISO_IMAGE_PATH=~/Downloads/${BASE_ISO_IMAGE_NAME}
 if [ ! -e ${BASE_ISO_IMAGE} ]; then
@@ -53,6 +55,10 @@ sudo rm -rf squashfs-root
 sudo unsquashfs mnt/casper/filesystem.squashfs
 mv squashfs-root new_chroot
 
+sudo cp -v ${BUILD_TOOLS_ROOT}/config/packages.list new_chroot/
+sudo cp -v ${BUILD_TOOLS_ROOT}/config/functions.sh new_chroot/
+
+
 sudo cp /etc/resolv.conf new_chroot/etc/
 
 sudo mount --bind /dev/ new_chroot/dev
@@ -69,7 +75,9 @@ dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
 apt-get update && apt-get -y upgrade
+source functions.sh
 
+install_custom_packages
 
 
 
