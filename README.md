@@ -55,8 +55,16 @@ sudo rm -rf squashfs-root
 sudo unsquashfs mnt/casper/filesystem.squashfs
 mv squashfs-root new_chroot
 
+
 sudo cp -v ${BUILD_TOOLS_ROOT}/config/packages.list new_chroot/
 sudo cp -v ${BUILD_TOOLS_ROOT}/config/functions.sh new_chroot/
+sudo mkdir -p new_chroot/opt/
+sudo cp -rv ${BUILD_TOOLS_ROOT}/suckless.org/dwm new_chroot/opt/
+sudo cp -rv ${BUILD_TOOLS_ROOT}/config/etc/skel new_chroot/etc/
+
+sudo mkdir -p new_chroot/usr/share/xsessions/
+sudo cp -rv ${BUILD_TOOLS_ROOT}/config/usr/share/xsessions/custom-dwm.desktop new_chroot/usr/share/xsessions/
+
 
 
 sudo cp /etc/resolv.conf new_chroot/etc/
@@ -78,6 +86,34 @@ apt-get update && apt-get -y upgrade
 source functions.sh
 
 install_custom_packages
+
+apt-get autoremove && apt-get autoclean
+rm -rf /tmp/* ~/.bash_history
+rm /var/lib/dbus/machine-id
+rm /sbin/initctl
+dpkg-divert --rename --remove /sbin/initctl
+
+#Unmount the directories from the beginning of this guide:
+
+umount /proc || umount -lf /proc
+umount /sys
+umount /dev/pts
+exit
+sudo umount new_chroot/dev
+
+#Generate a new file manifest:
+sudo chmod +w iso_image_disk/casper/filesystem.manifest
+sudo chroot edit dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee iso_image_disk/casper/filesystem.manifest
+sudo cp iso_image_disk/casper/filesystem.manifest iso_image_disk/casper/filesystem.manifest-desktop
+sudo sed -i '/ubiquity/d' iso_image_disk/casper/filesystem.manifest-desktop
+sudo sed -i '/casper/d' iso_image_disk/casper/filesystem.manifest-desktop
+
+#Compress the filesystem:
+sudo mksquashfs new_chroot iso_image_disk/casper/filesystem.squashfs -b 1048576
+
+#Update filesystem size (needed by the installer):
+printf $(sudo du -sx --block-size=1 new_chroot | cut -f1) | sudo tee iso_image_disk/casper/filesystem.size
+
 
 
 
