@@ -1,0 +1,32 @@
+htop
+git
+git-gui
+mc
+vim
+curl
+screenfetch
+neofetch
+
+#utilities
+sudo
+openssh-server
+apt-transport-https
+gmrun
+i3lock
+
+
+#DWM related
+dwm 
+suckless-tools
+stterm
+libx11-dev
+libxft-dev
+libxinerama-dev
+nitrogen
+feh 
+
+#GUI apps
+rxvt-unicode
+meld
+geany
+scrot

@@ -1,44 +1,24 @@
-# my-buntu
-Build scripts and customization files to build custom Ubuntu ISO image
 
-![screenshot](my-buntu-dwm-2019-07-02-133014_1440x900_scrot.png)
-
-
-### Different ways to build custom ISO I found in the Internet resources
-
-1. https://sourceforge.net/projects/pinguy-os/files/ISO_Builder/
-
-2. https://www.debuntu.org/how-to-customize-your-ubuntu-live-cd/
-https://www.debuntu.org/how-to-customize-your-ubuntu-live-cd-page-2/
-
-3. https://help.ubuntu.com/community/LiveCDCustomization
-use genisoimage  
-do not use mkisofs
-https://nathanpfry.com/how-to-customize-an-ubuntu-installation-disc/
-
-4. https://help.ubuntu.com/community/LiveCDCustomizationFromScratch
-
-5. CUBIC
-https://www.techrepublic.com/article/how-to-create-a-custom-ubuntu-iso-with-cubic/
-https://www.linuxuprising.com/2018/07/how-to-customize-ubuntu-or-linux-mint.html
-
-## LiveCDCustomization way 
+# LiveCDCustomization way for Linux Mint 19.1 XFCE 
 
 * Based on https://nathanpfry.com/how-to-customize-an-ubuntu-installation-disc/
 
-* run as root user:
+* run as  user:
 
 ```
 apt -y install squashfs-tools genisoimage
 
+cd my-buntu
 
 BUILD_TOOLS_ROOT=`pwd`
 cd ~/
 
-BASE_ISO_IMAGE_NAME="xubuntu-18.04.2-desktop-amd64.iso"
+#http://ftp.icm.edu.pl/pub/Linux/dist/linuxmint/isos/stable/19.1/linuxmint-19.1-xfce-64bit.iso
+
+BASE_ISO_IMAGE_NAME="linuxmint-19.1-xfce-64bit.iso"
 BASE_ISO_IMAGE_PATH=~/Downloads/${BASE_ISO_IMAGE_NAME}
 if [ ! -e ${BASE_ISO_IMAGE_PATH} ]; then
-	wget -O ${BASE_ISO_IMAGE_NAME} http://nl.archive.ubuntu.com/ubuntu-cdimage-xubuntu/releases/18.04/release/xubuntu-18.04.2-desktop-amd64.iso 
+	wget -O ${BASE_ISO_IMAGE_PATH} http://ftp.icm.edu.pl/pub/Linux/dist/linuxmint/isos/stable/19.1/linuxmint-19.1-xfce-64bit.iso 
 fi 
 sleep 1 
 sudo rm -rf ~/custom-img/  || true 
@@ -58,11 +38,13 @@ ls -alh iso_image_disk/
 
 sudo rm -rf squashfs-root || true 
 sudo unsquashfs mnt/casper/filesystem.squashfs
+
+rm -rf new_chroot || true 
 mv squashfs-root new_chroot
 
 #sudo cp -rv ${BUILD_TOOLS_ROOT}/includes.chroot/* new_chroot/
 
-sudo bash customization-script.sh ${BUILD_TOOLS_ROOT}
+sudo bash ${BUILD_TOOLS_ROOT}/customization-script.sh ${BUILD_TOOLS_ROOT}
 
 sudo cp /etc/resolv.conf new_chroot/etc/
 
@@ -81,6 +63,14 @@ dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
 apt-get update && apt-get -y upgrade
+
+
+dpkg --configure -a 
+apt-get install -f 
+
+apt-get update && apt-get -y upgrade
+
+
 source functions.sh
 
 install_custom_packages
@@ -127,8 +117,9 @@ sudo genisoimage -D -r -V "$IMAGE_NAME" -cache-inodes -J -l -b isolinux/isolinux
 
 
 cd ..
-ls -alh `pwd`/my-buntu-18.04.4-${DATE_TIME}.iso
+ls -alh `pwd`/my-mint-19.1-xfce-${DATE_TIME}.iso
 exit 0 
 
 ```
+
 
