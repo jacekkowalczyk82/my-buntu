@@ -22,6 +22,8 @@ if [ ! -e ${BASE_ISO_IMAGE_PATH} ]; then
 fi 
 sleep 1 
 sudo rm -rf ~/custom-img/  || true 
+
+
 mkdir -p ~/custom-img/
 echo "cp ${BASE_ISO_IMAGE_PATH} ~/custom-img/"
 cp -v ${BASE_ISO_IMAGE_PATH} ~/custom-img/
@@ -70,8 +72,8 @@ dbus-uuidgen > /var/lib/dbus/machine-id
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
-apt-get update && apt-get -y upgrade
 
+apt-get update && apt-get -y upgrade
 
 dpkg --configure -a 
 apt-get install -f 
@@ -79,9 +81,9 @@ apt-get install -f
 apt-get update && apt-get -y upgrade
 
 
-source functions.sh
-
+source /functions.sh
 install_custom_packages
+
 
 apt-get autoremove && apt-get autoclean
 rm -rf /tmp/* ~/.bash_history
