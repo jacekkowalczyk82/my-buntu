@@ -80,10 +80,29 @@
 				<execute>xed</execute>
 			</action>
 		</item>
-		
+		<item label="Geany">
+			<action name="Execute">
+				<execute>geany</execute>
+			</action>
+		</item>
 		<item label="Meld">
 			<action name="Execute">
 				<execute>meld</execute>
+			</action>
+		</item>
+		<item label="Audacious">
+			<action name="Execute">
+				<execute>audacious</execute>
+			</action>
+		</item>
+		<item label="VLC">
+			<action name="Execute">
+				<execute>vlc</execute>
+			</action>
+		</item>
+		<item label="MPV Media Player">
+			<action name="Execute">
+				<execute>mpv --player-operation-mode=pseudo-gui --</execute>
 			</action>
 		</item>
 		<item label="Xplayer">

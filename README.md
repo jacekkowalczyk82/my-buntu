@@ -42,6 +42,8 @@ if [ ! -e ${BASE_ISO_IMAGE_PATH} ]; then
 fi 
 sleep 1 
 sudo rm -rf ~/custom-img/  || true 
+
+
 mkdir -p ~/custom-img/
 echo "cp ${BASE_ISO_IMAGE_PATH} ~/custom-img/"
 cp -v ${BASE_ISO_IMAGE_PATH} ~/custom-img/
