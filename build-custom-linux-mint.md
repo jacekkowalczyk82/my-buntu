@@ -39,16 +39,24 @@ ls -alh iso_image_disk/
 sudo rm -rf squashfs-root || true 
 sudo unsquashfs mnt/casper/filesystem.squashfs
 
-rm -rf new_chroot || true 
+
+
+
+
+
+sudo rm -rf new_chroot || true 
 mv squashfs-root new_chroot
 
 #sudo cp -rv ${BUILD_TOOLS_ROOT}/includes.chroot/* new_chroot/
 
-sudo bash ${BUILD_TOOLS_ROOT}/customization-script.sh ${BUILD_TOOLS_ROOT}
+sudo bash ${BUILD_TOOLS_ROOT}/mint-customization-script.sh ${BUILD_TOOLS_ROOT}
 
+#????????
 sudo cp /etc/resolv.conf new_chroot/etc/
 
 sudo mount --bind /dev/ new_chroot/dev
+
+
 sudo chroot new_chroot
 
 mount -t proc none /proc
@@ -91,7 +99,7 @@ sudo umount new_chroot/dev
 
 #Generate a new file manifest:
 sudo chmod +w iso_image_disk/casper/filesystem.manifest
-sudo chroot edit dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee iso_image_disk/casper/filesystem.manifest
+sudo chroot new_chroot dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee iso_image_disk/casper/filesystem.manifest
 sudo cp iso_image_disk/casper/filesystem.manifest iso_image_disk/casper/filesystem.manifest-desktop
 sudo sed -i '/ubiquity/d' iso_image_disk/casper/filesystem.manifest-desktop
 sudo sed -i '/casper/d' iso_image_disk/casper/filesystem.manifest-desktop
@@ -104,16 +112,16 @@ printf $(sudo du -sx --block-size=1 new_chroot | cut -f1) | sudo tee iso_image_d
 
 #Delete the old md5sum:
 cd iso_image_disk
-sudo rm md5sum.txt
+sudo rm MD5SUMS
 
 #…and generate a fresh one: (single command, copy and paste in one piece)
 
-find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | sudo tee md5sum.txt
+find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | sudo tee MD5SUMS
 
 #And finally, create the ISO. This is a single long command, be sure to copy and paste it in one piece and don’t forget the period at the end, it’s important:
 
 DATE_TIME=`date '+%Y-%m-%d_%H%M'`
-sudo genisoimage -D -r -V "$IMAGE_NAME" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../my-buntu-18.04.4-${DATE_TIME}.iso . 
+sudo genisoimage -D -r -V "$IMAGE_NAME" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../my-mint-19.1-xfce-${DATE_TIME}.iso . 
 
 
 cd ..

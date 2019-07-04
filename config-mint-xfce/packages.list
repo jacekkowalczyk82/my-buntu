@@ -1,0 +1,58 @@
+htop
+git
+git-gui
+mc
+vim
+curl
+screenfetch
+neofetch
+#
+#
+#utilities
+sudo
+openssh-server
+apt-transport-https
+gmrun
+i3lock
+#
+#
+#DWM related
+dwm 
+suckless-tools
+stterm
+libx11-dev
+libxft-dev
+libxinerama-dev
+nitrogen
+feh 
+#
+#GUI apps
+rxvt-unicode
+sakura
+meld
+geany
+scrot
+#
+## i3
+i3
+i3lock
+conky
+#
+#
+## Openbox
+openbox
+obconf
+obmenu
+openbox-menu
+obsession
+tint2
+menu
+#
+## other
+youtube-dl
+#
+#dev tools
+meld
+chromium
+falkon
+#

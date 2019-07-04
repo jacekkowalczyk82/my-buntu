@@ -101,7 +101,7 @@ sudo umount new_chroot/dev
 
 #Generate a new file manifest:
 sudo chmod +w iso_image_disk/casper/filesystem.manifest
-sudo chroot edit dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee iso_image_disk/casper/filesystem.manifest
+sudo chroot new_chroot dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee iso_image_disk/casper/filesystem.manifest
 sudo cp iso_image_disk/casper/filesystem.manifest iso_image_disk/casper/filesystem.manifest-desktop
 sudo sed -i '/ubiquity/d' iso_image_disk/casper/filesystem.manifest-desktop
 sudo sed -i '/casper/d' iso_image_disk/casper/filesystem.manifest-desktop
