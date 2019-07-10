@@ -87,7 +87,7 @@
 				<execute>thunar</execute>
 			</action>
 		</item>
-		<item label="Geany">
+                <item label="Geany">
 			<action name="Execute">
 				<execute>geany</execute>
 			</action>
