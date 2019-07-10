@@ -56,7 +56,7 @@ sudo bash ${BUILD_TOOLS_ROOT}/mint-customization-script.sh ${BUILD_TOOLS_ROOT}
 #????????
 sudo cp /etc/resolv.conf new_chroot/etc/
 
-sudo mount --bind /dev/ new_chroot/dev
+sudo mount --bind /dev/ new_chroot/dev/
 
 
 sudo chroot new_chroot
