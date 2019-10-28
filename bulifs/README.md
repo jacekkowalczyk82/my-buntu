@@ -12,5 +12,9 @@ cd customIso
 
 bulifs config 
 
+mkdir -p work/chroot/var/tmp/
+touch work/chroot/var/tmp/packages.list.bak
+bulifs build
+
 ```
 
