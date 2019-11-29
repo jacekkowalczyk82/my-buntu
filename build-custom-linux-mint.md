@@ -3,7 +3,7 @@
 
 * Based on https://nathanpfry.com/how-to-customize-an-ubuntu-installation-disc/
 
-* run as  user:
+* run as root user:
 
 ```
 apt -y install squashfs-tools genisoimage
@@ -13,12 +13,12 @@ cd my-buntu
 BUILD_TOOLS_ROOT=`pwd`
 cd ~/
 
-#http://ftp.icm.edu.pl/pub/Linux/dist/linuxmint/isos/stable/19.1/linuxmint-19.1-xfce-64bit.iso
+#http://ftp.icm.edu.pl/pub/Linux/dist/linuxmint/isos/stable/19.2/linuxmint-19.2-xfce-64bit.iso
 
-BASE_ISO_IMAGE_NAME="linuxmint-19.1-xfce-64bit.iso"
+BASE_ISO_IMAGE_NAME="linuxmint-19.2-xfce-64bit.iso"
 BASE_ISO_IMAGE_PATH=~/Downloads/${BASE_ISO_IMAGE_NAME}
 if [ ! -e ${BASE_ISO_IMAGE_PATH} ]; then
-	wget -O ${BASE_ISO_IMAGE_PATH} http://ftp.icm.edu.pl/pub/Linux/dist/linuxmint/isos/stable/19.1/linuxmint-19.1-xfce-64bit.iso 
+	wget -O ${BASE_ISO_IMAGE_PATH} http://ftp.icm.edu.pl/pub/Linux/dist/linuxmint/isos/stable/19.2/linuxmint-19.2-xfce-64bit.iso 
 fi 
 sleep 1 
 sudo rm -rf ~/custom-img/  || true 
@@ -102,7 +102,7 @@ sudo umount new_chroot/dev
 #Generate a new file manifest:
 sudo chmod +w iso_image_disk/casper/filesystem.manifest
 sudo chroot new_chroot dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee iso_image_disk/casper/filesystem.manifest
-sudo cp iso_image_disk/casper/filesystem.manifest iso_image_disk/casper/filesystem.manifest-desktop
+sudo cp -v iso_image_disk/casper/filesystem.manifest iso_image_disk/casper/filesystem.manifest-desktop
 sudo sed -i '/ubiquity/d' iso_image_disk/casper/filesystem.manifest-desktop
 sudo sed -i '/casper/d' iso_image_disk/casper/filesystem.manifest-desktop
 
