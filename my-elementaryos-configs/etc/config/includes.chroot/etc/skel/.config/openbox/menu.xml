@@ -11,16 +11,12 @@
 				<execute>terminator</execute>
 			</action>
 		</item>
-		<item label="XTerm">
+		<item label="io.elementary.terminal">
 			<action name="Execute">
-				<execute>xterm</execute>
+				<execute>io.elementary.terminal</execute>
 			</action>
 		</item>
-		<item label="xfce4-terminal">
-			<action name="Execute">
-				<execute>xfce4-terminal</execute>
-			</action>
-		</item>
+		
 		<item label="urxvt">
 			<action name="Execute">
 				<execute>urxvt</execute>
@@ -70,11 +66,7 @@
 				<execute>firefox</execute>
 			</action>
 		</item>
-		<item label="Chromium">
-			<action name="Execute">
-				<execute>chromium</execute>
-			</action>
-		</item>
+		
 		<item label="Falkon">
 			<action name="Execute">
 				<execute>falkon</execute>
@@ -84,7 +76,7 @@
 		<separator/>
 		<item label="File Manager">
 			<action name="Execute">
-				<execute>thunar</execute>
+				<execute>io.elementary.files</execute>
 			</action>
 		</item>
                 <item label="Geany">
@@ -92,9 +84,9 @@
 				<execute>geany</execute>
 			</action>
 		</item>
-		<item label="xed">
+		<item label="io.elementary.code">
 			<action name="Execute">
-				<execute>xed</execute>
+				<execute>io.elementary.code</execute>
 			</action>
 		</item>
 		
@@ -118,20 +110,19 @@
 				<execute>mpv --player-operation-mode=pseudo-gui --</execute>
 			</action>
 		</item>
-		<item label="Xplayer">
+		<item label="io.elementary.music">
 			<action name="Execute">
-				<execute>xplayer</execute>
+				<execute>io.elementary.music</execute>
+			</action>
+		</item>
+		<item label="io.elementary.videos">
+			<action name="Execute">
+				<execute>io.elementary.videos</execute>
 			</action>
 		</item>
 		<item label="Htop">
 			<action name="Execute">
 				<execute>x-terminal-emulator -e htop</execute>
-			</action>
-		</item>
-
-		<item label="Task Manager">
-			<action name="Execute">
-				<execute>xfce4-taskmanager</execute>
 			</action>
 		</item>
 
@@ -179,7 +170,7 @@
 		</item>
 		<item label="Lock Screen">
 			<action name="Execute">
-				<execute>i3lock -i /usr/share/backgrounds/linuxmint/default_background.jpg</execute>
+				<execute>i3lock -i /usr/share/backgrounds/elementaryos-default</execute>
 			</action>
 		</item>
 
