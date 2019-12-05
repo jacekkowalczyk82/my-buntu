@@ -32,7 +32,6 @@ stterm
 libx11-dev
 libxft-dev
 libxinerama-dev
-nitrogen
 feh 
 #
 #GUI apps
@@ -73,6 +72,6 @@ audacious
 audacious-plugins
 #
 #internet 
-chromium-bsu
+firefox
 falkon
 #
