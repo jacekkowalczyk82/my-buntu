@@ -1,4 +1,7 @@
-xubuntu-meta
+xubuntu-desktop
+xubuntu-core
+ubiquity
+ubiquity-slideshow-xubuntu
 
 ## DWM
 dwm
@@ -47,15 +50,12 @@ libreoffice
 
 #terminals
 xterm
-#lxterminal
 terminator
 xfce4-terminal
 rxvt-unicode
 sakura
 
 #web browsers
-falkon
-chromium
 firefox
 
 youtube-dl
