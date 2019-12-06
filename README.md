@@ -148,7 +148,7 @@ CODENAME="bionic"
 KERNEL_FLAVORS="generic"
 MIRROR_URL="http://archive.ubuntu.com/ubuntu/"
 NAME="my-buntu-dwm"
-
+BASEVERSION="18.04"
 
 sudo lb config noauto \
     --architectures amd64 \
@@ -188,5 +188,16 @@ sudo lb clean --purge
 
 #build ISO
 sudo lb build --debug --verbose 2>&1 |tee ${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log
+
+
+
+mkdir artifacts
+docker run --privileged -i \
+    -v /proc:/proc \
+    -v ${PWD}/artifacts:/artifacts \
+    -v ${PWD}:/working_dir \
+    -w /working_dir \
+    debian:latest \
+    /bin/bash < build.sh
 
 ```
