@@ -152,6 +152,7 @@ NAME="my-buntu-dwm"
 
 sudo lb config noauto \
     --architectures amd64 \
+    --grub-splash grub2.png \
     --mode ubuntu \
     --initramfs none \
     --distribution "$BASECODENAME" \
@@ -186,6 +187,6 @@ sudo lb config noauto \
 sudo lb clean --purge
 
 #build ISO
-sudo lb build --debug --verbose 2>&1 |tee lb-build-my-buntu-`date '+%Y-%m-%d_%H%M%S'`.log
+sudo lb build --debug --verbose 2>&1 |tee ${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log
 
 ```
