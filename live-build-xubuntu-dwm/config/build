@@ -1,0 +1,10 @@
+[Image]
+Architecture: amd64
+Archive-Areas: main restricted universe multiverse
+Distribution: bionic
+Mirror-Bootstrap: http://archive.ubuntu.com/ubuntu/
+
+[FIXME]
+Configuration-Version: 1:20190311
+Name: live-image
+Type: iso-hybrid

@@ -134,3 +134,58 @@ exit 0
 
 ```
 
+
+## DRAFT - testing Live build - not sure it that will work 
+
+```
+mkdir -p my-buntu/live-build-xubuntu-dwm
+cd my-buntu/live-build-xubuntu-dwm
+
+#sudo lb config --debian-installer live -d buster --debian-installer-distribution daily
+
+BASECODENAME="bionic"
+CODENAME="bionic"
+KERNEL_FLAVORS="generic"
+MIRROR_URL="http://archive.ubuntu.com/ubuntu/"
+NAME="my-buntu-dwm"
+
+
+sudo lb config noauto \
+    --architectures amd64 \
+    --mode ubuntu \
+    --initramfs none \
+    --distribution "$BASECODENAME" \
+    --parent-distribution "$BASECODENAME" \
+    --archive-areas "main restricted universe multiverse" \
+    --parent-archive-areas "main restricted universe multiverse" \
+    --linux-packages linux-image \
+    --linux-flavours "$KERNEL_FLAVORS" \
+    --bootappend-live "boot=casper maybe-ubiquity quiet splash" \
+    --mirror-bootstrap "$MIRROR_URL" \
+    --parent-mirror-bootstrap "$MIRROR_URL" \
+    --mirror-chroot-security "http://security.ubuntu.com/ubuntu/" \
+    --parent-mirror-chroot-security "http://security.ubuntu.com/ubuntu/" \
+    --mirror-binary-security "http://security.ubuntu.com/ubuntu/" \
+    --parent-mirror-binary-security "http://security.ubuntu.com/ubuntu/" \
+    --mirror-binary "http://archive.ubuntu.com/ubuntu/" \
+    --parent-mirror-binary "http://archive.ubuntu.com/ubuntu/" \
+    --keyring-packages ubuntu-keyring \
+    --apt-options "--yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100" \
+    --uefi-secure-boot enable \
+    --binary-images iso-hybrid \
+    --iso-application "$NAME" \
+    --iso-volume "$NAME" \
+    --firmware-binary false \
+    --firmware-chroot false \
+    --zsync false
+
+
+#add your packages to config/package-lists/live.list.chroot
+#add your customization files to config/includes.chroot/
+#when rebuilding run also clean
+sudo lb clean --purge
+
+#build ISO
+sudo lb build --debug --verbose 2>&1 |tee lb-build-my-buntu-`date '+%Y-%m-%d_%H%M%S'`.log
+
+```
