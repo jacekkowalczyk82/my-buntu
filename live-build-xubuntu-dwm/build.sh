@@ -18,10 +18,15 @@ patch -d /usr/lib/live/build/ < live-build-fix-syslinux.patch
 
 BASECODENAME="bionic"
 CODENAME="bionic"
-KERNEL_FLAVORS="generic"
+KERNEL_FLAVORS="generic-hwe"
 MIRROR_URL="http://archive.ubuntu.com/ubuntu/"
 NAME="my-buntu-dwm"
 BASEVERSION="18.04"
+VERSION="18.04"
+
+
+#--bootappend-live "boot=casper maybe-ubiquity quiet splash" 
+
 
 lb config noauto \
     --architectures amd64 \
@@ -34,7 +39,7 @@ lb config noauto \
     --parent-archive-areas "main restricted universe multiverse" \
     --linux-packages linux-image \
     --linux-flavours "$KERNEL_FLAVORS" \
-    --bootappend-live "boot=casper maybe-ubiquity quiet splash" \
+    --bootappend-live "boot=casper maybe-ubiquity " \
     --mirror-bootstrap "$MIRROR_URL" \
     --parent-mirror-bootstrap "$MIRROR_URL" \
     --mirror-chroot-security "http://security.ubuntu.com/ubuntu/" \
@@ -57,7 +62,12 @@ lb config noauto \
 #build ISO
 lb build --debug --verbose 2>&1 |tee ${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log
 
+FNAME="$NAME-$VERSION-`date '+%Y-%m-%d_%H%M%S'`"
+mv "live-image-amd64.hybrid.iso" ${FNAME}.iso
 
+md5sum "${FNAME}.iso" > "${FNAME}.md5.txt"
+sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt"
+    
 
 #mkdir artifacts
 #docker run --privileged -i \

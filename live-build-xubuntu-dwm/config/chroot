@@ -18,7 +18,7 @@ LB_KEYRING_PACKAGES="ubuntu-keyring"
 
 # $LB_LINUX_FLAVOURS: set kernel flavour to use
 # (Default: autodetected)
-LB_LINUX_FLAVOURS="generic"
+LB_LINUX_FLAVOURS="generic-hwe"
 
 # $LB_LINUX_PACKAGES: set kernel packages to use
 # (Default: autodetected)
