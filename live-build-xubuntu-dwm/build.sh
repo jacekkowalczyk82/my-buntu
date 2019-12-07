@@ -18,7 +18,7 @@ patch -d /usr/lib/live/build/ < live-build-fix-syslinux.patch
 
 BASECODENAME="bionic"
 CODENAME="bionic"
-KERNEL_FLAVORS="generic-hwe"
+KERNEL_FLAVORS="generic"
 MIRROR_URL="http://archive.ubuntu.com/ubuntu/"
 NAME="my-buntu-dwm"
 BASEVERSION="18.04"
