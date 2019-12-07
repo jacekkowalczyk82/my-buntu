@@ -1,3 +1,17 @@
+ubuntu-standard
+casper
+lupin-casper
+discover
+laptop-detect
+os-prober
+network-manager
+resolvconf
+net-tools
+wireless-tools
+wpagui
+locales
+linux-generic
+
 xubuntu-desktop
 xubuntu-core
 ubiquity
