@@ -12,14 +12,14 @@ wireless-tools
 wpagui
 locales
 linux-generic
-linux-image-generic
+#linux-image-generic
 
 ubiquity 
 ubiquity-casper
 ubiquity-frontend-gtk
 ubiquity-slideshow-xubuntu
-#ubiquity-ubuntu-artwork
-ubiquity-xubuntu-artwork
+ubiquity-ubuntu-artwork
+
 memtest86+
 
 xubuntu-desktop
