@@ -27,6 +27,7 @@ VERSION="18.04"
 
 #--bootappend-live "boot=casper maybe-ubiquity quiet splash" 
 
+lb clean 
 
 lb config noauto \
     --architectures amd64 \
