@@ -12,7 +12,8 @@ wireless-tools
 wpagui
 locales
 linux-generic
-#linux-image-generic
+live-boot
+
 
 ubiquity 
 ubiquity-casper
