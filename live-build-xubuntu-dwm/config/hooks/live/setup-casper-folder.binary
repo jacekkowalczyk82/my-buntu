@@ -12,4 +12,4 @@ mkdir live || true
 cp casper/vmlinuz live/vmlinuz
 
 mkdir install || true
-cp boot/memtest86+_multiboot.bin install/mt86plus || true
+cp boot/memtest86+.bin install/mt86plus
