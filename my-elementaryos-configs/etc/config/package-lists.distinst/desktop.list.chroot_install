@@ -9,7 +9,6 @@ io.elementary.initial-setup
 
 htop
 git
-git-gui
 mc
 vim
 curl
@@ -73,5 +72,5 @@ audacious-plugins
 #
 #internet 
 firefox
-falkon
+#falkon
 #
