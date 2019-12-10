@@ -35,10 +35,10 @@ apt -y install squashfs-tools genisoimage
 BUILD_TOOLS_ROOT=`pwd`
 cd ~/
 
-BASE_ISO_IMAGE_NAME="xubuntu-18.04.2-desktop-amd64.iso"
+BASE_ISO_IMAGE_NAME="xubuntu-18.04.3-desktop-amd64.iso"
 BASE_ISO_IMAGE_PATH=~/Downloads/${BASE_ISO_IMAGE_NAME}
 if [ ! -e ${BASE_ISO_IMAGE_PATH} ]; then
-	wget -O ${BASE_ISO_IMAGE_NAME} http://nl.archive.ubuntu.com/ubuntu-cdimage-xubuntu/releases/18.04/release/xubuntu-18.04.2-desktop-amd64.iso 
+	wget -O ${BASE_ISO_IMAGE_NAME} http://nl.archive.ubuntu.com/ubuntu-cdimage-xubuntu/releases/18.04/release/xubuntu-18.04.3-desktop-amd64.iso 
 fi 
 sleep 1 
 sudo rm -rf ~/custom-img/  || true 
@@ -125,11 +125,11 @@ find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | sudo t
 #And finally, create the ISO. This is a single long command, be sure to copy and paste it in one piece and don’t forget the period at the end, it’s important:
 
 DATE_TIME=`date '+%Y-%m-%d_%H%M'`
-sudo genisoimage -D -r -V "$IMAGE_NAME" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../my-buntu-18.04.4-${DATE_TIME}.iso . 
+sudo genisoimage -D -r -V "$IMAGE_NAME" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../my-buntu-18.04.3-${DATE_TIME}.iso . 
 
 
 cd ..
-ls -alh `pwd`/my-buntu-18.04.4-${DATE_TIME}.iso
+ls -alh `pwd`/my-buntu-18.04.3-${DATE_TIME}.iso
 exit 0 
 
 ```
