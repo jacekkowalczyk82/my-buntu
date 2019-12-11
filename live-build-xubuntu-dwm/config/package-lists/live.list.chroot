@@ -6,6 +6,7 @@ discover
 laptop-detect
 os-prober
 network-manager
+netplan
 resolvconf
 net-tools
 wireless-tools
