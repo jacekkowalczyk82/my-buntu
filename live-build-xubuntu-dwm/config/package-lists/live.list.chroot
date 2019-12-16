@@ -107,17 +107,17 @@ papirus-icon-theme
 
 
 
-#systray apps
-pulseaudio
-pavucontrol
-pasystray
+## systray apps
+#pulseaudio
+#pavucontrol
+#pasystray
 udiskie
-network-manager
-network-manager-gnome
+#network-manager
+#network-manager-gnome
 #clipit
-xfce4-power-manager
-xfce4-taskmanager
-xscreensaver
+#xfce4-power-manager
+#xfce4-taskmanager
+#xscreensaver
 plank
 
 #utilities
