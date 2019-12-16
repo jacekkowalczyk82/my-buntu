@@ -6,7 +6,7 @@ discover
 laptop-detect
 os-prober
 network-manager
-netplan
+#netplan
 resolvconf
 net-tools
 wireless-tools
@@ -14,7 +14,6 @@ wpagui
 locales
 linux-generic
 live-boot
-
 
 ubiquity 
 ubiquity-casper
