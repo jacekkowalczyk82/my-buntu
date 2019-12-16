@@ -174,7 +174,7 @@
 		</item>
 		<item label="Lock Screen">
 			<action name="Execute">
-				<execute>i3lock -i /usr/share/desktop-base/futureprototype-theme/grub/grub-16x9.png</execute>
+				<execute>i3lock -i /usr/share/xfce4/backdrops/thierry_marthy__unnamed__4k.jpg</execute>
 			</action>
 		</item>
 
