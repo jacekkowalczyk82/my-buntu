@@ -55,6 +55,7 @@ lb config noauto \
     --firmware-chroot false \
     --zsync false
 
+cp -r -v ../backgrounds ./config/includes.chroot/opt/ 
 
 #build ISO
 lb build --debug --verbose 2>&1 |tee ${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log

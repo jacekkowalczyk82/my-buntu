@@ -1,3 +1,4 @@
+live-boot
 systemd-sysv
 ubuntu-standard
 casper
@@ -13,18 +14,16 @@ wireless-tools
 wpagui
 locales
 linux-generic
-live-boot
 
 ubiquity 
 ubiquity-casper
 ubiquity-frontend-gtk
-ubiquity-slideshow-xubuntu
+ubiquity-slideshow-kubuntu
 ubiquity-ubuntu-artwork
 
 memtest86+
 
-xubuntu-desktop
-xubuntu-core
+kubuntu-desktop
 
 ###Customizations starts here 
 
@@ -63,34 +62,34 @@ nitrogen
 feh
 scrot
 
-#editors 
+## editors 
 #leafpad
 mousepad
 geany
 
-##accessories
+## accessories
 galculator
 xarchiver
 libreoffice
 
-#terminals
+## terminals
 xterm
 terminator
-xfce4-terminal
+#xfce4-terminal
 rxvt-unicode
 sakura
 
-#web browsers
+## web browsers
 firefox
 
 youtube-dl
 
-#dev tools
+## dev tools
 meld
 
-# file manager
+## file manager
 xfe
-thunar
+#thunar
 tango-icon-theme
 adwaita-icon-theme
 hicolor-icon-theme
@@ -119,7 +118,7 @@ udiskie
 #xscreensaver
 plank
 
-#utilities
+## utilities
 sudo
 git
 git-gui
@@ -134,10 +133,10 @@ neofetch
 gmrun
 
 
-#printers
-system-config-printer
+## printers
+#system-config-printer
 
-#multimedia 
+## multimedia 
 vlc
 mpv
 audacious

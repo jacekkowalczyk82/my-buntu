@@ -14,7 +14,8 @@ hsetroot -solid "#2E3436" &
 ## 3. sleep - give compositor time to start
 ## 4. tint2 panel
 (\
-nitrogen --restore && \
+#nitrogen --restore && \
+feh --bg-scale /opt/backgrounds/pexels.com/dawn-desktop-backgrounds-dusk-2816056.jpg && \
 
 #compton -b && \
 sleep 2s && \
@@ -31,7 +32,7 @@ udiskie -ant &
 #pasystray & # it is already started by some magic
 
 ## Enable power management
-xfce4-power-manager &
+#xfce4-power-manager &
 
 ## Start xscreensaver
 #xscreensaver -no-splash &

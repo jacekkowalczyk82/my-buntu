@@ -1,3 +1,4 @@
+live-boot
 systemd-sysv
 ubuntu-standard
 casper
@@ -13,7 +14,6 @@ wireless-tools
 wpagui
 locales
 linux-generic
-live-boot
 
 ubiquity 
 ubiquity-casper
@@ -24,7 +24,7 @@ ubiquity-ubuntu-artwork
 memtest86+
 
 xubuntu-desktop
-xubuntu-core
+#xubuntu-core
 
 ###Customizations starts here 
 
@@ -34,7 +34,7 @@ suckless-tools
 #dmenu
 #slock
 
-#for-building DWM 
+## for-building DWM 
 stterm
 libx11-dev
 libxft-dev
@@ -63,32 +63,32 @@ nitrogen
 feh
 scrot
 
-#editors 
+## editors 
 #leafpad
 mousepad
 geany
 
-##accessories
+## accessories
 galculator
 xarchiver
 libreoffice
 
-#terminals
+## terminals
 xterm
 terminator
 xfce4-terminal
 rxvt-unicode
 sakura
 
-#web browsers
+## web browsers
 firefox
 
 youtube-dl
 
-#dev tools
+## dev tools
 meld
 
-# file manager
+## file manager
 xfe
 thunar
 tango-icon-theme
@@ -134,10 +134,10 @@ neofetch
 gmrun
 
 
-#printers
-system-config-printer
+## printers
+#system-config-printer
 
-#multimedia 
+## multimedia 
 vlc
 mpv
 audacious

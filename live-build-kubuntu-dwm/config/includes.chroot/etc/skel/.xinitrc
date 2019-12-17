@@ -1,7 +1,7 @@
 #~/.xinitrc
 
-exec nitrogen --restore &
-#exec feh --bg-scale /usr/share/xfce4/backdrops/thierry_marthy__unnamed__4k.jpg &
+#exec nitrogen --restore &
+exec feh --bg-scale /opt/backgrounds/pexels.com/dawn-desktop-backgrounds-dusk-2816056.jpg &
 #exec feh --bg-scale /home/kowalczy/Pictures/futureprototype_login.png & 
 exec compton -b &
 dropbox_status_string=""

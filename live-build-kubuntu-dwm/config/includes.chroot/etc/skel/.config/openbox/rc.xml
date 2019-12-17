@@ -385,7 +385,7 @@
           <enabled>true</enabled>
           <name>Lock screen</name>
         </startupnotify>
-	<command>i3lock -i /usr/share/xfce4/backdrops/thierry_marthy__unnamed__4k.jpg</command>
+	<command>i3lock -i /opt/backgrounds/pexels.com/dawn-desktop-backgrounds-dusk-2816056.jpg</command>
       </action>
     </keybind>
 

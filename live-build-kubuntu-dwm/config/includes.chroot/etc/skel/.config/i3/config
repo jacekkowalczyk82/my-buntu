@@ -170,7 +170,8 @@ bar {
 }
 
 #Jacek autostart 
-exec --no-startup-id nitrogen --restore & 
+#exec --no-startup-id nitrogen --restore & 
+exec feh --bg-scale /opt/backgrounds/pexels.com/dawn-desktop-backgrounds-dusk-2816056.jpg & 
 exec --no-startup-id conky -c ~/.i3wm_conkyrc & 
 #automount cd/dvd, usb disks and show notifications
 exec --no-startup-id udiskie -ant & 

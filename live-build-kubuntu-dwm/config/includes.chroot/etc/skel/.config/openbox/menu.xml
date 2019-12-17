@@ -175,7 +175,7 @@
 		</item>
 		<item label="Lock Screen">
 			<action name="Execute">
-				<execute>i3lock -i /usr/share/xfce4/backdrops/thierry_marthy__unnamed__4k.jpg</execute>
+				<execute>i3lock -i /opt/backgrounds/pexels.com/dawn-desktop-backgrounds-dusk-2816056.jpg</execute>
 			</action>
 		</item>
 
