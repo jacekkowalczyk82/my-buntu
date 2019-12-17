@@ -58,7 +58,8 @@ tint2
 menu
 
 
-lightdm 
+#lightdm 
+sddm
 compton
 nitrogen
 feh
