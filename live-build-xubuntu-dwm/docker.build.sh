@@ -13,7 +13,7 @@ continue_or_abort() {
 			*) echo "Invalid option, please try again";;
 		esac
 	done
-	if [[ $abort -eq 1]]; then 
+	if [[ $abort -eq 1 ]]; then 
 		exit 1
 	fi
 }
