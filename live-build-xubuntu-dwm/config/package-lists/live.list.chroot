@@ -119,7 +119,7 @@ udiskie
 #xscreensaver
 plank
 
-#utilities
+## utilities
 sudo
 git
 git-gui

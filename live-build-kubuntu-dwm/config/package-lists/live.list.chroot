@@ -35,7 +35,7 @@ suckless-tools
 #dmenu
 #slock
 
-#for-building DWM 
+## for-building DWM 
 stterm
 libx11-dev
 libxft-dev
@@ -91,7 +91,6 @@ meld
 
 ## file manager
 xfe
-#thunar
 tango-icon-theme
 adwaita-icon-theme
 hicolor-icon-theme
