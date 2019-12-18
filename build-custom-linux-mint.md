@@ -8,7 +8,7 @@
 ```
 apt -y install squashfs-tools genisoimage
 
-cd my-buntu
+cd ~/my-buntu
 
 BUILD_TOOLS_ROOT=`pwd`
 cd ~/
@@ -53,7 +53,6 @@ mv squashfs-root new_chroot
 
 sudo bash ${BUILD_TOOLS_ROOT}/mint-customization-script.sh ${BUILD_TOOLS_ROOT}
 
-#????????
 sudo cp /etc/resolv.conf new_chroot/etc/
 
 sudo mount --bind /dev/ new_chroot/dev/
