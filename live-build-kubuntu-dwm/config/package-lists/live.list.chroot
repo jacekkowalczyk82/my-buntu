@@ -1,4 +1,7 @@
-live-boot
+#lests try without live boot package
+#
+#live-boot
+
 systemd-sysv
 ubuntu-standard
 casper
@@ -17,11 +20,11 @@ linux-generic
 
 ubiquity 
 ubiquity-casper
-ubiquity-frontend-gtk
+ubiquity-frontend-kde
 ubiquity-slideshow-kubuntu
 ubiquity-ubuntu-artwork
 
-calamares
+#calamares
 
 memtest86+
 
@@ -61,13 +64,13 @@ menu
 #lightdm 
 sddm
 compton
-nitrogen
+#nitrogen
 feh
 scrot
 
 ## editors 
 #leafpad
-mousepad
+#mousepad
 geany
 
 ## accessories
