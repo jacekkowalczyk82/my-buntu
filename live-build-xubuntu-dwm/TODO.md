@@ -6,5 +6,7 @@ gnome-bluetooth libgnome-bluetooth13:amd64 gnome-control-center-data \
 gkbd-capplet 
 
 
+sudo apt autoremove 
+
 
 ```
