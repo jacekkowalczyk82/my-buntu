@@ -2,8 +2,8 @@
 
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
-    <property name="ThemeName" type="string" value="Xfce-curve"/>
-    <property name="IconThemeName" type="string" value="Numix-Light"/>
+    <property name="ThemeName" type="string" value="Numix"/>
+    <property name="IconThemeName" type="string" value="ePapirus"/>
     <property name="DoubleClickTime" type="empty"/>
     <property name="DoubleClickDistance" type="empty"/>
     <property name="DndDragThreshold" type="empty"/>
@@ -12,6 +12,7 @@
     <property name="SoundThemeName" type="empty"/>
     <property name="EnableEventSounds" type="empty"/>
     <property name="EnableInputFeedbackSounds" type="empty"/>
+    <property name="FallbackIconTheme" type="empty"/>
   </property>
   <property name="Xft" type="empty">
     <property name="DPI" type="empty"/>
@@ -19,6 +20,7 @@
     <property name="Hinting" type="empty"/>
     <property name="HintStyle" type="empty"/>
     <property name="RGBA" type="empty"/>
+    <property name="Lcdfilter" type="empty"/>
   </property>
   <property name="Gtk" type="empty">
     <property name="CanChangeAccels" type="empty"/>

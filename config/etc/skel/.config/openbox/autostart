@@ -14,7 +14,8 @@ hsetroot -solid "#2E3436" &
 ## 3. sleep - give compositor time to start
 ## 4. tint2 panel
 (\
-nitrogen --restore && \
+#nitrogen --restore && \
+feh --bg-scale /usr/share/xfce4/backdrops/thierry_marthy__unnamed__4k.jpg  && \
 
 #compton -b && \
 sleep 2s && \

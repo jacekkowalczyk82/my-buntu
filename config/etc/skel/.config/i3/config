@@ -170,7 +170,8 @@ bar {
 }
 
 #Jacek autostart 
-exec --no-startup-id nitrogen --restore & 
+#exec --no-startup-id nitrogen --restore & 
+exec feh --bg-scale /usr/share/xfce4/backdrops/thierry_marthy__unnamed__4k.jpg & 
 exec --no-startup-id conky -c ~/.i3wm_conkyrc & 
 #automount cd/dvd, usb disks and show notifications
 exec --no-startup-id udiskie -ant & 
@@ -178,9 +179,9 @@ exec --no-startup-id udiskie -ant &
 exec --no-startup-id nm-applet & 
 
 #volume vontrol applet in systray
-exec --no-startup-id pasystray & 
+#exec --no-startup-id pasystray & 
 
-exec --no-startup-id compton -b & 
+#exec --no-startup-id compton -b & 
 exec --no-startup-id xfce4-power-manager & 
 #exec --no-startup-id clipit & 
 
