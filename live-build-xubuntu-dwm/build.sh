@@ -21,9 +21,12 @@ BASEVERSION="18.04"
 VERSION="18.04"
 
 
+LOGFILE="${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log"
+
 #--bootappend-live "boot=casper maybe-ubiquity quiet splash" 
 
-lb clean 
+lb clean |tee -a $LOGFILE
+
 
 lb config noauto \
     --architectures amd64 \
@@ -53,16 +56,21 @@ lb config noauto \
     --iso-volume "$NAME" \
     --firmware-binary false \
     --firmware-chroot false \
-    --zsync false
+    --zsync false  |tee -a $LOGFILE
+
 
 #build ISO
-lb build --debug --verbose 2>&1 |tee ${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log
+lb build --debug --verbose 2>&1 |tee -a $LOGFILE
+
 
 FNAME="$NAME-$VERSION-`date '+%Y-%m-%d_%H%M%S'`"
-mv "live-image-amd64.hybrid.iso" ${FNAME}.iso
+mv "live-image-amd64.hybrid.iso" ${FNAME}.iso | tee -a $LOGFILE
 
-md5sum "${FNAME}.iso" > "${FNAME}.md5.txt"
-sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt"
+
+md5sum "${FNAME}.iso" > "${FNAME}.md5.txt" |tee -a $LOGFILE
+
+sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt" |tee -a $LOGFILE
+
     
 
 #mkdir artifacts
