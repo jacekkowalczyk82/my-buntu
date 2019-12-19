@@ -6,7 +6,7 @@ continue_or_abort() {
 	echo "n/N  - Abort build"
 	while true 
 	do 
-		read -p "Please enter your option" choice
+		read -p "Please enter your option: " choice
 		case $choice in
 			n|N) abort=1; break;; 
 			y|Y) echo "Lets build it "; break;; 
