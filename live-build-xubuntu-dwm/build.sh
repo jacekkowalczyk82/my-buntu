@@ -28,6 +28,8 @@ LOGFILE="${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log"
 lb clean |tee -a $LOGFILE
 
 
+rm live-image-amd64*
+
 lb config noauto \
     --architectures amd64 \
     --grub-splash grub2.png \
@@ -60,11 +62,11 @@ lb config noauto \
 
 
 #build ISO
-lb build --debug --verbose 2>&1 |tee -a $LOGFILE
+lb build --debug --verbose 2>&1 |tee -a $LOGFILE ||true
 
 
 FNAME="$NAME-$VERSION-`date '+%Y-%m-%d_%H%M%S'`"
-mv "live-image-amd64.hybrid.iso" ${FNAME}.iso | tee -a $LOGFILE
+mv -v "live-image-amd64.hybrid.iso" ${FNAME}.iso | tee -a $LOGFILE
 
 
 md5sum "${FNAME}.iso" > "${FNAME}.md5.txt" |tee -a $LOGFILE
