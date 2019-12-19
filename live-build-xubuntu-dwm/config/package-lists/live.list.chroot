@@ -1,4 +1,7 @@
-live-boot
+#lests try without live boot package
+#
+#live-boot
+
 systemd-sysv
 ubuntu-standard
 casper
@@ -24,7 +27,6 @@ ubiquity-ubuntu-artwork
 memtest86+
 
 xubuntu-desktop
-#xubuntu-core
 
 ###Customizations starts here 
 
@@ -59,13 +61,12 @@ menu
 
 lightdm 
 compton
-nitrogen
+#nitrogen
 feh
 scrot
 
 ## editors 
 #leafpad
-mousepad
 geany
 
 ## accessories
@@ -76,7 +77,6 @@ libreoffice
 ## terminals
 xterm
 terminator
-xfce4-terminal
 rxvt-unicode
 sakura
 
@@ -90,7 +90,6 @@ meld
 
 ## file manager
 xfe
-thunar
 tango-icon-theme
 adwaita-icon-theme
 hicolor-icon-theme

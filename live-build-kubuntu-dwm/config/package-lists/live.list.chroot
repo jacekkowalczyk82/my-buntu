@@ -24,8 +24,6 @@ ubiquity-frontend-kde
 ubiquity-slideshow-kubuntu
 ubiquity-ubuntu-artwork
 
-#calamares
-
 memtest86+
 
 kubuntu-desktop
@@ -61,7 +59,6 @@ tint2
 menu
 
 
-#lightdm 
 sddm
 compton
 #nitrogen
@@ -70,7 +67,6 @@ scrot
 
 ## editors 
 #leafpad
-#mousepad
 geany
 
 ## accessories
@@ -81,7 +77,6 @@ libreoffice
 ## terminals
 xterm
 terminator
-#xfce4-terminal
 rxvt-unicode
 sakura
 

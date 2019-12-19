@@ -21,6 +21,8 @@ continue_or_abort() {
 cp -r -v ../backgrounds ./config/includes.chroot/opt/ 
 
 continue_or_abort
+
+
 docker run --privileged -i \
     -v /proc:/proc \
     -v ${PWD}/artifacts:/artifacts \
