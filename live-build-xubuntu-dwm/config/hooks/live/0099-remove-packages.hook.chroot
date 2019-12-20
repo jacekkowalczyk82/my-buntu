@@ -12,4 +12,4 @@ sudo apt remove  --yes --purge indicator-application \
     gkbd-capplet  || true
 
 sudo apt autoremove  || true
-
+echo "GNOME PACKAGES REMOVED"

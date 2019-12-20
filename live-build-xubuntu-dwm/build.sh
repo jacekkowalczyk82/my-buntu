@@ -23,7 +23,9 @@ VERSION="18.04"
 
 lb clean 
 
-rm live-image-amd64* ||true
+if [[ -e live-image-amd64.hybrid.iso ]]; then 
+	rm -f live-image-amd64* 
+fi 
 
 lb config noauto \
     --architectures amd64 \
