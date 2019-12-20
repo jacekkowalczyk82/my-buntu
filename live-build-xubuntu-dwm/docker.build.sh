@@ -22,6 +22,7 @@ cp -r -v ../backgrounds ./config/includes.chroot/opt/
 
 continue_or_abort
 
+LOGFILE="${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log"
 
 docker run --privileged -i \
     -v /proc:/proc \
@@ -29,6 +30,6 @@ docker run --privileged -i \
     -v ${PWD}:/working_dir \
     -w /working_dir \
     debian:latest \
-    /bin/bash < build.sh
+    /bin/bash < build.sh 2>&1 | tee ${LOGFILE}
 
 
