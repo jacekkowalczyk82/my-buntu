@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-sudo apt remove  --yes --purge indicator-application \
+sudo apt-get remove -y --purge indicator-application \
     indicator-bluetooth \
     indicator-datetime \
     indicator-keyboard \
@@ -11,5 +11,5 @@ sudo apt remove  --yes --purge indicator-application \
     gnome-control-center-data \
     gkbd-capplet  || true
 
-sudo apt autoremove  || true
+sudo apt-get autoremove  || true
 echo "GNOME PACKAGES REMOVED"
