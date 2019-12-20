@@ -16,7 +16,7 @@ BASECODENAME="bionic"
 CODENAME="bionic"
 KERNEL_FLAVORS="generic"
 MIRROR_URL="http://archive.ubuntu.com/ubuntu/"
-NAME="my-buntu-dwm-xfce"
+NAME="my-buntu-dwm"
 BASEVERSION="18.04"
 VERSION="18.04"
 
@@ -58,7 +58,7 @@ lb config noauto \
     --zsync false
 
 #build ISO
-lb build --debug --verbose 
+lb build --debug --verbose 2>&1
 
 sleep 5 
 
