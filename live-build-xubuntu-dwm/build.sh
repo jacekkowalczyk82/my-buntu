@@ -56,7 +56,7 @@ lb config noauto \
     --zsync false
 
 #build ISO
-lb build --debug --verbose 2>&1
+lb build --debug --verbose 
 
 sleep 5 
 
