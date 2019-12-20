@@ -21,9 +21,9 @@ BASEVERSION="18.04"
 VERSION="18.04"
 
 
-#--bootappend-live "boot=casper maybe-ubiquity quiet splash" 
-
 lb clean 
+
+rm live-image-amd64* ||true
 
 lb config noauto \
     --architectures amd64 \
@@ -56,14 +56,24 @@ lb config noauto \
     --zsync false
 
 #build ISO
-lb build --debug --verbose 2>&1 |tee ${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log
+lb build --debug --verbose 2>&1
 
-FNAME="$NAME-$VERSION-`date '+%Y-%m-%d_%H%M%S'`"
-mv "live-image-amd64.hybrid.iso" ${FNAME}.iso
+sleep 5 
 
-md5sum "${FNAME}.iso" > "${FNAME}.md5.txt"
-sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt"
-    
+if [[ -e live-image-amd64.hybrid.iso ]]; then 
+    echo "Live Build Generated: live-image-amd64.hybrid.iso"
+    FNAME="$NAME-$VERSION-`date '+%Y-%m-%d_%H%M%S'`"
+    mv -v "live-image-amd64.hybrid.iso" ${FNAME}.iso 
+    echo "Renamed live-image-amd64.hybrid.iso to ${FNAME}.iso "
+    md5sum "${FNAME}.iso" > "${FNAME}.md5.txt" 
+    sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt" 
+
+
+else
+    echo "FAILED to generate iso"
+fi
+
+echo "BUILD SCRIPT FINISHED"
 
 #mkdir artifacts
 #docker run --privileged -i \

@@ -53,11 +53,12 @@ lb config noauto \
     --iso-volume "$NAME" \
     --firmware-binary false \
     --firmware-chroot false \
-    --zsync false  
-
+    --zsync false
 
 #build ISO
-lb build --debug --verbose 2>&1 ||true
+lb build --debug --verbose 2>&1
+
+sleep 5 
 
 if [[ -e live-image-amd64.hybrid.iso ]]; then 
     echo "Live Build Generated: live-image-amd64.hybrid.iso"
@@ -72,7 +73,7 @@ else
     echo "FAILED to generate iso"
 fi
 
-    
+echo "BUILD SCRIPT FINISHED"
 
 #mkdir artifacts
 #docker run --privileged -i \

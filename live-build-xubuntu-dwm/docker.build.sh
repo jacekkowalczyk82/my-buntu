@@ -28,6 +28,6 @@ docker run --privileged -i \
     -v ${PWD}:/working_dir \
     -w /working_dir \
     debian:latest \
-    /bin/bash < build.sh 
+    /bin/bash < build.sh
 
 
