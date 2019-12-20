@@ -21,14 +21,9 @@ BASEVERSION="18.04"
 VERSION="18.04"
 
 
-LOGFILE="${NAME}-`date '+%Y-%m-%d_%H%M%S'`.log"
+lb clean 
 
-#--bootappend-live "boot=casper maybe-ubiquity quiet splash" 
-
-lb clean |tee -a $LOGFILE
-
-
-rm live-image-amd64*
+rm live-image-amd64* ||true
 
 lb config noauto \
     --architectures amd64 \
@@ -58,20 +53,24 @@ lb config noauto \
     --iso-volume "$NAME" \
     --firmware-binary false \
     --firmware-chroot false \
-    --zsync false  |tee -a $LOGFILE
+    --zsync false  
 
 
 #build ISO
-lb build --debug --verbose 2>&1 |tee -a $LOGFILE ||true
+lb build --debug --verbose 2>&1 ||true
+
+if [[ -e live-image-amd64.hybrid.iso ]]; then 
+    echo "Live Build Generated: live-image-amd64.hybrid.iso"
+    FNAME="$NAME-$VERSION-`date '+%Y-%m-%d_%H%M%S'`"
+    mv -v "live-image-amd64.hybrid.iso" ${FNAME}.iso 
+    echo "Renamed live-image-amd64.hybrid.iso to ${FNAME}.iso "
+    md5sum "${FNAME}.iso" > "${FNAME}.md5.txt" 
+    sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt" 
 
 
-FNAME="$NAME-$VERSION-`date '+%Y-%m-%d_%H%M%S'`"
-mv -v "live-image-amd64.hybrid.iso" ${FNAME}.iso | tee -a $LOGFILE
-
-
-md5sum "${FNAME}.iso" > "${FNAME}.md5.txt" |tee -a $LOGFILE
-
-sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt" |tee -a $LOGFILE
+else
+    echo "FAILED to generate iso"
+fi
 
     
 
