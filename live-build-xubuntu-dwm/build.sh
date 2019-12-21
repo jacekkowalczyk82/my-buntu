@@ -16,16 +16,14 @@ BASECODENAME="bionic"
 CODENAME="bionic"
 KERNEL_FLAVORS="generic"
 MIRROR_URL="http://archive.ubuntu.com/ubuntu/"
-NAME="my-buntu-dwm"
+NAME="my-buntu-dwm-xfce"
 BASEVERSION="18.04"
 VERSION="18.04"
 
 
 lb clean 
 
-if [[ -e live-image-amd64.hybrid.iso ]]; then 
-	rm -f live-image-amd64* 
-fi 
+rm live-image-amd64* ||true
 
 lb config noauto \
     --architectures amd64 \
