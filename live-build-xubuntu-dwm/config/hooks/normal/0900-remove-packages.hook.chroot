@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+set -e
+
 apt-get remove -y --purge indicator-application \
     indicator-bluetooth \
     indicator-datetime \
@@ -9,9 +11,9 @@ apt-get remove -y --purge indicator-application \
     gnome-bluetooth \
     libgnome-bluetooth13:amd64 \
     gnome-control-center-data \
-    gkbd-capplet  || true
+    gkbd-capplet 2>&1 > /dev/null || true
 
-apt-get autoremove  || true
-echo "GNOME PACKAGES REMOVED"
+apt-get autoremove 2>&1 > /dev/null || true
 
 exit 0
+
