@@ -3,9 +3,9 @@
 set -e
 
 updateicons () { 
-for ico in `ls /usr/share/icons/`; do 
-   gtk-update-icon-cache /usr/share/icons/$ico; || true 
-done
+    for ico in `ls /usr/share/icons/`; do 
+       gtk-update-icon-cache /usr/share/icons/$ico 
+    done
 }
 
 updateicons || true 
