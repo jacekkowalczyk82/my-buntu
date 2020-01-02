@@ -87,11 +87,11 @@ sleep 5
 
 if [[ -e live-image-amd64.hybrid.iso ]]; then 
     echo "Live Build Generated: live-image-amd64.hybrid.iso" |tee -a ${LOGFILE}
-    FNAME="$NAME-$VERSION-`date '+%Y-%m-%d_%H%M%S'`" |tee -a ${LOGFILE}
+    FNAME="$NAME-$VERSION-`date '+%Y-%m-%d_%H%M%S'`" 
     mv -v "live-image-amd64.hybrid.iso" ${FNAME}.iso  |tee -a ${LOGFILE}
     echo "Renamed live-image-amd64.hybrid.iso to ${FNAME}.iso " |tee -a ${LOGFILE}
-    md5sum "${FNAME}.iso" > "${FNAME}.md5.txt"  |tee -a ${LOGFILE}
-    sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt"  |tee -a ${LOGFILE}
+    md5sum "${FNAME}.iso" > "${FNAME}.md5.txt" 
+    sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt" 
 
 
 else
