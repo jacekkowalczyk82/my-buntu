@@ -26,8 +26,7 @@ ubiquity-ubuntu-artwork
 
 memtest86+
 
-#xubuntu-desktop
-xubuntu-core
+xubuntu-desktop
 
 ###Customizations starts here 
 
@@ -67,7 +66,7 @@ feh
 scrot
 
 ## editors 
-leafpad
+#leafpad
 geany
 
 ## accessories
@@ -76,7 +75,6 @@ xarchiver
 libreoffice
 
 ## terminals
-xfce4-terminal
 xterm
 terminator
 rxvt-unicode
@@ -91,7 +89,6 @@ youtube-dl
 meld
 
 ## file manager
-thunar
 xfe
 tango-icon-theme
 adwaita-icon-theme
@@ -116,8 +113,8 @@ udiskie
 #network-manager
 #network-manager-gnome
 #clipit
-xfce4-power-manager
-xfce4-taskmanager
+#xfce4-power-manager
+#xfce4-taskmanager
 #xscreensaver
 plank
 
