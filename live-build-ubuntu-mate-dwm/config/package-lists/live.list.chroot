@@ -57,7 +57,7 @@ tint2
 menu
 
 
-sddm
+lightdm
 compton
 #nitrogen
 feh
@@ -91,12 +91,11 @@ tango-icon-theme
 adwaita-icon-theme
 hicolor-icon-theme
 
-
-breeze-icon-theme
+#breeze-icon-theme
 faba-icon-theme
 faenza-icon-theme
-moka-icon-theme
-tango-icon-theme
+#moka-icon-theme
+#tango-icon-theme
 numix-icon-theme
 papirus-icon-theme
 
