@@ -23,8 +23,10 @@ ubiquity-ubuntu-artwork
 
 memtest86+
 
+ubuntu-mate-desktop
 mate-desktop
 mate-tweak
+bash 
 
 ###Customizations starts here 
 
