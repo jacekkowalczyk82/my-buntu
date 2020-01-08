@@ -17,7 +17,7 @@ linux-generic
 
 ubiquity 
 ubiquity-casper
-ubiquity-frontend-mate
+ubiquity-frontend-gtk
 ubiquity-slideshow-ubuntu-mate
 ubiquity-ubuntu-artwork
 
