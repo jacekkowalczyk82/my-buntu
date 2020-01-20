@@ -107,7 +107,7 @@ papirus-icon-theme
 
 ## systray apps
 #pulseaudio
-#pavucontrol
+pavucontrol
 #pasystray
 udiskie
 #network-manager
@@ -123,8 +123,11 @@ sudo
 git
 git-gui
 curl
+wget
 mc
+nano
 vim-gtk3
+emacs
 htop
 openssh-server
 apt-transport-https
