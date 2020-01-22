@@ -16,7 +16,7 @@ BASECODENAME="bionic"
 CODENAME="bionic"
 KERNEL_FLAVORS="generic"
 MIRROR_URL="http://archive.ubuntu.com/ubuntu/"
-NAME="my-buntu-dwm-kde"
+NAME="my-buntu-dwm-lxqt"
 BASEVERSION="18.04"
 VERSION="18.04"
 

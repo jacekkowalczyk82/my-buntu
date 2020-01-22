@@ -1,7 +1,3 @@
-#lests try without live boot package
-#
-#live-boot
-
 systemd-sysv
 ubuntu-standard
 casper
@@ -20,13 +16,13 @@ linux-generic
 
 ubiquity 
 ubiquity-casper
-ubiquity-frontend-kde
-ubiquity-slideshow-kubuntu
+ubiquity-frontend-gtk
+ubiquity-slideshow-lubuntu
 ubiquity-ubuntu-artwork
 
 memtest86+
 
-kubuntu-desktop
+lubuntu-desktop
 
 ###Customizations starts here 
 
@@ -59,14 +55,14 @@ tint2
 menu
 
 
-sddm
+lightdm 
 compton
 #nitrogen
 feh
 scrot
 
 ## editors 
-#leafpad
+leafpad
 geany
 
 ## accessories
@@ -107,7 +103,7 @@ papirus-icon-theme
 
 ## systray apps
 #pulseaudio
-#pavucontrol
+pavucontrol
 #pasystray
 udiskie
 #network-manager
@@ -123,14 +119,22 @@ sudo
 git
 git-gui
 curl
+wget
 mc
-vim
+nano
+vim-gtk3
+emacs
 htop
 openssh-server
 apt-transport-https
 screenfetch
 neofetch
 gmrun
+zip
+unzip
+rsync 
+tmux
+
 
 
 ## printers
@@ -138,10 +142,12 @@ gmrun
 
 ## multimedia 
 vlc
+mplayer
 mpv
 audacious
 audacious-plugins
-
+imagemagick
+gimp
 
 # resue tools for passwords and disks
 ntfs-3g
@@ -151,3 +157,9 @@ fdisk
 e2fsprogs
 chntpw
 		
+#for connecting USB android devices and development work 
+python3
+usb-modeswitch
+adb
+openjdk-11-jdk
+

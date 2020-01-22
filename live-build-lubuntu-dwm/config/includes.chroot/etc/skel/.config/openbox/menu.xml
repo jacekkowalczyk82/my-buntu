@@ -16,9 +16,9 @@
 				<execute>xterm</execute>
 			</action>
 		</item>
-		<item label="Konsole">
+		<item label="LXTerminal">
 			<action name="Execute">
-				<execute>konsole</execute>
+				<execute>lxterminal</execute>
 			</action>
 		</item>
 		<item label="urxvt">
@@ -70,6 +70,7 @@
 				<execute>firefox</execute>
 			</action>
 		</item>
+<!--
 		<item label="Chromium">
 			<action name="Execute">
 				<execute>chromium</execute>
@@ -80,11 +81,12 @@
 				<execute>falkon</execute>
 			</action>
 		</item>
+-->
 		<!-- This requires the presence of the 'openbox-menu' package to work -->
 		<separator/>
 		<item label="File Manager">
 			<action name="Execute">
-				<execute>dolphin</execute>
+				<execute>pcmanfm</execute>
 			</action>
 		</item>
 		<item label="Geany">
@@ -93,9 +95,9 @@
 			</action>
 		</item>
 		
-		<item label="Kwrite">
+		<item label="leafpad">
 			<action name="Execute">
-				<execute>kwrite</execute>
+				<execute>leafpad</execute>
 			</action>
 		</item>
 		
@@ -127,7 +129,7 @@
 
 		<item label="Task Manager">
 			<action name="Execute">
-				<execute>ksysguard</execute>
+				<execute>lxtask</execute>
 			</action>
 		</item>
 

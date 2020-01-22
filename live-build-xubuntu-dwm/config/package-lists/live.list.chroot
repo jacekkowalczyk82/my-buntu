@@ -1,7 +1,3 @@
-#lests try without live boot package
-#
-#live-boot
-
 systemd-sysv
 ubuntu-standard
 casper
