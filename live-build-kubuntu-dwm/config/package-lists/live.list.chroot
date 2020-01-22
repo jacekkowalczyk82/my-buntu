@@ -66,7 +66,7 @@ feh
 scrot
 
 ## editors 
-#leafpad
+leafpad
 geany
 
 ## accessories
@@ -123,14 +123,22 @@ sudo
 git
 git-gui
 curl
+wget
 mc
-vim
+nano
+vim-gtk3
+emacs
 htop
 openssh-server
 apt-transport-https
 screenfetch
 neofetch
 gmrun
+zip
+unzip
+rsync 
+tmux
+
 
 
 ## printers
@@ -138,10 +146,12 @@ gmrun
 
 ## multimedia 
 vlc
+mplayer
 mpv
 audacious
 audacious-plugins
-
+imagemagick
+gimp
 
 # resue tools for passwords and disks
 ntfs-3g
@@ -151,3 +161,9 @@ fdisk
 e2fsprogs
 chntpw
 		
+#for connecting USB android devices and development work 
+python3
+usb-modeswitch
+adb
+openjdk-11-jdk
+
