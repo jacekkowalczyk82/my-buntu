@@ -23,9 +23,10 @@ ubiquity-ubuntu-artwork
 
 memtest86+
 
-ubuntu-mate-desktop
-mate-desktop
-mate-tweak
+xorg
+#ubuntu-mate-desktop
+#mate-desktop
+#mate-tweak
 bash 
 
 ###Customizations starts here 
@@ -95,8 +96,8 @@ meld
 xfe
 caja
 ranger
-mate-themes
-greybird-gtk-theme
+#mate-themes
+#greybird-gtk-theme
 
 tango-icon-theme
 adwaita-icon-theme
@@ -112,12 +113,12 @@ papirus-icon-theme
 
 
 ## systray apps
-#pulseaudio
-#pavucontrol
-#pasystray
+pulseaudio
+pavucontrol
+pasystray
 udiskie
-#network-manager
-#network-manager-gnome
+network-manager
+network-manager-gnome
 #clipit
 #xfce4-power-manager
 #xfce4-taskmanager
