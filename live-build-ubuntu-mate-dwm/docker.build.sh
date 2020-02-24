@@ -30,4 +30,9 @@ docker run --privileged -i \
     debian:latest \
     /bin/bash < build.sh
 
+NAME="my-buntu-dwm-mate"
+VERSION="18.04"    
+aws s3 --region us-east-2 cp $NAME-$VERSION-*.iso s3://jacekkowalczyk82.private.s3/my-buntu-images/  
+aws s3 --region us-east-2 cp $NAME-$VERSION-*.sha256.txt s3://jacekkowalczyk82.private.s3/my-buntu-images/  
+aws s3 --region us-east-2 cp $NAME-$VERSION-*.md5.txt s3://jacekkowalczyk82.private.s3/my-buntu-images/  
 

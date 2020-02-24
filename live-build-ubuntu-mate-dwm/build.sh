@@ -68,9 +68,9 @@ if [[ -e live-image-amd64.hybrid.iso ]]; then
     md5sum "${FNAME}.iso" > "${FNAME}.md5.txt" 
     sha256sum "${FNAME}.iso" > "${FNAME}.sha256.txt" 
 
-
 else
     echo "FAILED to generate iso"
 fi
 
 echo "BUILD SCRIPT FINISHED"
+
