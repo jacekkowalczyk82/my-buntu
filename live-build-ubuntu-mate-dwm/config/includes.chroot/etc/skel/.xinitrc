@@ -3,7 +3,7 @@
 #exec nitrogen --restore &
 exec feh --bg-scale /opt/backgrounds/pexels.com/dawn-desktop-backgrounds-dusk-2816056.jpg &
 #exec feh --bg-scale /home/kowalczy/Pictures/futureprototype_login.png & 
-exec compton -b &
+#exec compton -b &
 dropbox_status_string=""
 while true ; do 
 #    dropbox_status=$(dropbox-cli status | head -n 1)

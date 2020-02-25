@@ -112,8 +112,8 @@ papirus-icon-theme
 
 
 ## systray apps
-#pulseaudio
-#pavucontrol
+pulseaudio
+pavucontrol
 #pasystray
 udiskie
 #network-manager
