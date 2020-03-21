@@ -1,0 +1,18 @@
+ sudo apt update 
+ sudo apt full-upgrade
+ 
+ sudo apt install htop vim mc tmux zip unzip curl nano git 
+
+# sudo apt install make 
+# sudo apt install gcc 
+#   30  sudo apt install build-essential 
+#   35  sudo apt install --reinstall linux-headers-generic
+
+ sudo apt install avahi-daemon
+ sudo apt install xorg dwm suckless-tools stterm i3lock 
+ sudo apt install feh 
+ sudo apt install scrot neofetch 
+ sudo apt install adb 
+ sudo apt install android-tools-adb 
+ sudo apt install android-tools-fastboot 
+ history |grep apt | tee -a git/github.com/my-buntu/pi3_model_B_v1.2/install.txt
