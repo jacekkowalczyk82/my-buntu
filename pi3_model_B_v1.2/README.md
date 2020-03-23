@@ -46,4 +46,34 @@ sudo apt install usb-modeswitch
 # You will need to add rules files dedicated to your hardware to directory: /etc/udev/rules.d/
 ```
 
+* Copy some backgrounds to /opt/backgrounds/
+* Create ~/xinitrc file: 
+
+```
+exec feh --bg-scale /opt/backgrounds/pexels.com/dawn-desktop-backgrounds-dusk-2816056.jpg &
+
+while true ; do 
+    load=$(cat /proc/loadavg |cut -d " " -f 3 )
+    uptime=$(uptime -p)
+    load_uptime="Load15: ${load}; ${uptime}"
+    xsetroot -name "`date '+%Y-%m-%d %H:%M.%S' ` $load_uptime "; sleep 1; 
+done &
+
+exec dwm
+
+```
+
+* Create link .xsession 
+
+```
+cd ~/
+ln -s .xinitrc .xsession 
+
+```
+
+* Reboot pi and login back 
+* Start DWM by `startx` command. 
+
+![DWM screen at Pi](./screens/2020-03-21-164018_1600x900_scrot.png)
+
 
