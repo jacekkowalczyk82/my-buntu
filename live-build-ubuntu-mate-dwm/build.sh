@@ -6,19 +6,24 @@ echo -e "
 #----------------------#
 "
 
+ping -c 4 deb.debian.org
+ping -c 4 security.debian.org
+
 apt-get update
-apt-get install -y live-build patch ubuntu-keyring
+apt-get install -y neofetch live-build patch ubuntu-keyring
+
+neofetch 
 
 patch -d /usr/lib/live/build/ < live-build-fix-syslinux.patch
 
 
-BASECODENAME="bionic"
-CODENAME="bionic"
+BASECODENAME="focal"
+CODENAME="focal"
 KERNEL_FLAVORS="generic"
 MIRROR_URL="http://archive.ubuntu.com/ubuntu/"
 NAME="my-buntu-dwm-mate"
-BASEVERSION="18.04"
-VERSION="18.04"
+BASEVERSION="20.04"
+VERSION="20.04"
 
 
 lb clean 
