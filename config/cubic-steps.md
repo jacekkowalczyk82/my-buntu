@@ -13,7 +13,7 @@ suckless-tools \
 stterm \
 libx11-dev \
 libxft-dev \
-libxinerama-dev \
+libxinerama-dev
 
 
 apt install i3 \
@@ -22,7 +22,6 @@ i3status \
 conky \
 openbox \
 obconf \
-obmenu \
 openbox-menu \
 obsession \
 tint2 \
@@ -33,14 +32,20 @@ nitrogen \
 feh \
 scrot
 
+apt install snapd
+snap install snap-store
+
+apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+
 
 apt install geany \
 galculator \
 xarchiver \
 libreoffice \
 xterm \
-terminator \
-rxvt-unicode \
+guake \
 sakura \
 firefox \
 youtube-dl \
@@ -66,20 +71,43 @@ curl \
 mc \
 vim \
 htop \
-openssh-server \
 apt-transport-https \
-screenfetch \
 neofetch \
-gmrun \
-vlc \
-mpv \
+gmrun
+
+
+apt install vlc \
+celluloid \
 audacious \
 audacious-plugins \
-ntfs-3g \
+imagemagick \
+gimp
+
+
+apt install ntfs-3g \
+exfat-fuse \
+exfat-utils \
 mtools \
 gparted \
 fdisk \
 e2fsprogs \
 chntpw
+
+apt install zip \
+unzip \
+rsync \
+tmux \
+system-config-printer \
+dkms \
+python3 \
+usb-modeswitch \
+android-tools-adb  \
+android-tools-fastboot  \
+openjdk-11-jdk
+
+
+#flatpak install flathub io.github.celluloid_player.Celluloid
+
+
 
 ```	
