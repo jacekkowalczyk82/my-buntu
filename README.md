@@ -352,3 +352,8 @@ ls -alh `pwd`/${NEW_ISO_NAME}
 ```
 
 
+## Upload to sourceforge 
+
+MATE_RELEASE_NAME="ubuntu-mate-20.04.0-2020.06.10-desktop-amd64"
+rsync --progress -e ssh  ${MATE_RELEASE_NAME}.* jacekkowalczyk8@frs.sourceforge.net:/home/frs/project/my-buntu/my-buntu/
+
