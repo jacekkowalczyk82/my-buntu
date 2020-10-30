@@ -64,6 +64,10 @@ papirus-icon-theme \
 udiskie \
 plank
 
+
+apt install rxvt-unicode
+
+
 apt install sudo \
 git \
 git-gui \
